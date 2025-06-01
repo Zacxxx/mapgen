@@ -602,18 +602,18 @@ const MapDisplay: React.FC<MapDisplayProps> = ({
         {isWorldPopulated && (mapViewMode === 'biomes' || mapViewMode === 'regions' || mapViewMode === 'realistic' || mapViewMode === 'elevation') && ( 
             <>
                 {hoveredRegionId && hoveredRegionId !== selectedRegionId && hoveredRegionBorders.length > 0 && (
-                    <path d={bordersToPath(hoveredRegionBorders)} stroke={HOVER_BORDER_COLOR} strokeWidth={(GENERIC_HIGHLIGHT_BORDER_WIDTH * 1.1) / zoomLevel} fill="none" vectorEffect="non-scaling-stroke"/>
+                    <path d={bordersToPath(hoveredRegionBorders)} stroke={HOVER_BORDER_COLOR} strokeWidth={(GENERIC_HIGHLIGHT_BORDER_WIDTH * 1.0) / zoomLevel} fill="none" vectorEffect="non-scaling-stroke"/>
                 )}
                 {selectedRegionId && selectedRegionBorders.length > 0 && (
-                    <path d={bordersToPath(selectedRegionBorders)} stroke={SELECTED_BORDER_COLOR} strokeWidth={(GENERIC_HIGHLIGHT_BORDER_WIDTH * 1.2) / zoomLevel} fill="none" vectorEffect="non-scaling-stroke"/>
+                    <path d={bordersToPath(selectedRegionBorders)} stroke={SELECTED_BORDER_COLOR} strokeWidth={(GENERIC_HIGHLIGHT_BORDER_WIDTH * 1.5) / zoomLevel} fill="none" vectorEffect="non-scaling-stroke"/>
                 )}
                 {hoveredBiomeId && hoveredBiomeId !== selectedBiomeId && hoveredBiomeBorders.length > 0 &&
                     (!selectedRegionId || mapBiomes.find(b => b.id === hoveredBiomeId)?.regionId !== selectedRegionId) && (
-                    <path d={bordersToPath(hoveredBiomeBorders)} stroke={HOVER_BORDER_COLOR} strokeWidth={(GENERIC_HIGHLIGHT_BORDER_WIDTH * 1.1) / zoomLevel} fill="none" vectorEffect="non-scaling-stroke"/>
+                    <path d={bordersToPath(hoveredBiomeBorders)} stroke={HOVER_BORDER_COLOR} strokeWidth={(GENERIC_HIGHLIGHT_BORDER_WIDTH * 1.0) / zoomLevel} fill="none" vectorEffect="non-scaling-stroke"/>
                 )}
                 {selectedBiomeId && selectedBiomeBorders.length > 0 &&
                     (!selectedRegionId || mapBiomes.find(b => b.id === selectedBiomeId)?.regionId !== selectedRegionId) && (
-                    <path d={bordersToPath(selectedBiomeBorders)} stroke={SELECTED_BORDER_COLOR} strokeWidth={(GENERIC_HIGHLIGHT_BORDER_WIDTH * 1.2) / zoomLevel} fill="none" vectorEffect="non-scaling-stroke"/>
+                    <path d={bordersToPath(selectedBiomeBorders)} stroke={SELECTED_BORDER_COLOR} strokeWidth={(GENERIC_HIGHLIGHT_BORDER_WIDTH * 1.5) / zoomLevel} fill="none" vectorEffect="non-scaling-stroke"/>
                 )}
             </>
         )}
