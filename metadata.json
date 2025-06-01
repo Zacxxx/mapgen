@@ -1,0 +1,5 @@
+{
+  "name": "AI Fantasy Map Generator",
+  "description": "A dynamic map generator that uses AI to create interactive fantasy world maps with clickable and hoverable points of interest. Explore unique locations with AI-generated names and descriptions.",
+  "requestFramePermissions": []
+}
